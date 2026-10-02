@@ -1,0 +1,15 @@
+[package]
+name = "imgv"
+version = "0.1.0"
+edition = "2024"
+description = "A fast, native image folder viewer"
+license = "MIT"
+
+[dependencies]
+iced = { version = "0.13", features = ["image", "tokio"] }
+image = "0.25"
+rfd = "0.15"
+
+[profile.release]
+lto = "thin"
+strip = true
